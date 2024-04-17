@@ -24,7 +24,7 @@ def parser(contents):
         instruction = tokens[0]
         tokens.remove(instruction)
 
-        # String Output (Hello World program) functionality
+        # String Output (Cat/Hello World? program) functionality takes string and outputs, string. idk if this qualifies as cat
         if(instruction == "SENTOUT"):
             combined_token = ""
             for token in tokens:
@@ -71,6 +71,29 @@ def parser(contents):
             for c in charlist:
                 reversed_char = c + reversed_char
             print(reversed_char)
+        
+        # String Output (Hello World program) functionality
+        if(instruction == "RELEASE"):
+            if(tokens.count != 0):
+                print("Too many additional arguments for 'RELEASE'")
+            else:
+                print("Hello World!")
+
+        # Reapeat String Output functionality
+        if(instruction == "PARTY"):
+            combined_token = ""
+            for token in tokens:
+                if(token.isdigit()):
+                    val = int(token)
+                    while(val != 0):
+                        print(combined_token)
+                        val -= 1
+                else:
+                    token = token.replace('"', "", 2)
+                    token = token.replace("'", "", 2)
+                    combined_token += token + " "
+
+            
 
 
 def parse(file):
