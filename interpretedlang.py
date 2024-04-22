@@ -74,9 +74,6 @@ def parser(contents):
         
         # String Output (Hello World program) functionality
         if(instruction == "RELEASE"):
-            if(tokens.count != 0):
-                print("Too many additional arguments for 'RELEASE'")
-            else:
                 print("Hello World!")
 
         # Reapeat String Output functionality
