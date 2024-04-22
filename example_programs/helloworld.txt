@@ -1,2 +1,3 @@
 SENTOUT "Hello, World!" "Goodbye, World!"
 SENTOUT Zacian and Zamazenta
+RELEASE
